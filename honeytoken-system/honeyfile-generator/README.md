@@ -16,4 +16,4 @@ Started out with just two file types to test how the script would look. Ran for 
 
 ### Modifications
 
-I wanted to edit the script so that it would include multiple entries in each file and it would have a header at the top of the document to simulate metadata because `.csv` and `.txt` files don't contain embedded metadata. I also wanted the administrator running the script to be able to choose what the filename would be.     
+I wanted to edit the script so that it would include multiple entries in each file and it would randomize the creation date of the file. I also wanted the administrator running the script to be able to choose what the filename would be.     
