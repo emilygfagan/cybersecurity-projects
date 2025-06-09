@@ -18,6 +18,12 @@ Started out with just two file types to test how the script would look. Ran for 
 
 I wanted to edit the script so that it would include multiple entries in each file and it would randomize the creation date of the file. I also wanted the administrator running the script to be able to choose what the filename would be.     
 
+Here's an example of the script being run in PowerShell and the outcome:     
+
+![image4](images/2.1script.png)      
+
+![image5](images/2.1terminated.png)     
+
 
 ### Modify Date Created
 
