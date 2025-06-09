@@ -16,9 +16,9 @@ This honeytoken system is designed for use in a Windows Server Active Directory 
 - Let the user input folder path to save the documents in
 - Prompt for:
   - Number of honeyfiles to generate
-  - File type: `.txt`, `.csv`, `.docx`, `.xlsx`
+  - File type: `.txt` or `.csv`
 - Use randomized content (names, roles, salaries)
-- Metadata injection for `.docx` and `.xlsx` including backdating
+- Randomized file system timestamps (`Created`, `Modified`, and `Accessed` dates) added for every file
 
  
 ### Part 2: File Access Logging
