@@ -10,5 +10,10 @@ I ran into the issue while learning about Honeytoken systems that creating a bun
 
 Started out with just two file types to test how the script would look. Ran for the first time and everything was smooth and worked correctly. Below is the output for my first run, where I selected 3 `.csv` files, and the second run where I selected 4 `.txt` files.      
 
-![image2](images/v1.0csv.png)  ![image3](images/v1.1txt.png)     
+![image2](images/v1.0csv.png)  ![image3](images/v1.1txt.png)        
 
+
+
+### Modifications
+
+I wanted to edit the script so that it would include multiple entries in each file and it would have a header at the top of the document to simulate metadata because `.csv` and `.txt` files don't contain embedded metadata. I also wanted the administrator running the script to be able to choose what the filename would be.     
