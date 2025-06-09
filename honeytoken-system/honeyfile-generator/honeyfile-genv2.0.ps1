@@ -1,6 +1,6 @@
-# Honeyfile Generator v2.0 - Simplified for .txt and .csv
+# Honeyfile Generator v2.1 - Simplified for .txt and .csv with randomized timestamps
 # Author: Emily Fagan
-# Description: Generates realistic decoy files with fake HR data
+# Description: Generates realistic decoy files with fake HR data and realistic timestamps
 
 # Prompt for path
 $targetFolder = Read-Host "Enter full path to store honeyfiles (e.g., C:\HRConfidential\Salary_Information)"
@@ -24,7 +24,7 @@ for ($i = 1; $i -le $numFiles; $i++) {
     $name = Get-Random -InputObject $names
     $role = Get-Random -InputObject $roles
     $dept = Get-Random -InputObject $departments
-    $date = (Get-Date).AddDays(-1 * (Get-Random -Minimum 30 -Maximum 365))
+    $date = (Get-Date).AddDays(-1 * (Get-Random -Minimum 30 -Maximum 2000))
     $customName = Read-Host "Enter a name for honeyfile #$i (do not include the extension)"
     $filename = "$customName.$fileType"
     $filepath = Join-Path $targetFolder $filename
@@ -77,5 +77,10 @@ for ($i = 1; $i -le $numFiles; $i++) {
         }
     }
 
-    Write-Host "Created: $filename ($numEntries entries)"
+    # Set file timestamps
+    (Get-Item $filepath).CreationTime = $date
+    (Get-Item $filepath).LastWriteTime = $date
+    (Get-Item $filepath).LastAccessTime = $date
+
+    Write-Host "Created: $filename ($numEntries entries) with timestamp: $($date.ToShortDateString())"
 }
