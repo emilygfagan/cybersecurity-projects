@@ -11,7 +11,7 @@ This project is built as an extension of the Fagan Systems Active Directory lab:
 This honeytoken system is designed for use in a Windows Server Active Directory domain (fagan.local). It focuses on automating the deployment and monitoring of honeyfiles, with a clear progression from setup to data analysis.     
 
 
-### [Part 1: Honeyfile Generation (PowerShell)](./honeyfile-generator/README.md)
+### [Part 1: Honeyfile Generator (PowerShell)](./honeyfile-generator/README.md)
 - Run within the `Fagan Systems` domain controller or member server
 - Let the user input folder path to save the documents in
 - Prompt for:
