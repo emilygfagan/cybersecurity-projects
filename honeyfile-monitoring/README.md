@@ -1,1 +1,3 @@
-# Creating a Honeyfile for Monitoring
+# Honeyfile Generator
+
+This tool automates the creation of decoy documents using PowerShell and Windows Operating System.
