@@ -21,7 +21,7 @@ This honeytoken system is designed for use in a Windows Server Active Directory 
 - Randomized file system timestamps (`Created`, `Modified`, and `Accessed` dates) added for every file
 
  
-### Part 2: File Access Logging
+### [Part 2: File Access Logging](./file-access-logging/README.md)     
 - Configure Windows Security Auditing to track reads and opens on the honeyfiles
 - Log access events using:
   - Windows Event Viewer (Event ID 4663)
