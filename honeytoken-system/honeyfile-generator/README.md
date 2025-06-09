@@ -1,32 +1,63 @@
 # Part 1 of the Honeytoken System: File Generator
 
-I ran into the issue while learning about Honeytoken systems that creating a bunch of random documents is very tedious. I decided to create a script in PowerShell that would automate the process for me... because that's what it's for, right?     
+While learning about honeytoken systems, I ran into a problem: manually creating a bunch of realistic decoy documents was tedious and repetitive. So, I wrote a PowerShell script to automate it. That’s what scripting is for, right?     
+
+This marks Part 1 of my multi-phase honeytoken project, where I focus on building realistic decoy files for use in a Windows domain environment (`fagan.local`).         
 
 
-### Base Code
+
+### Base Generator Code
 
 ![image1](images/basecode.png)     
 
 
-Started out with just two file types to test how the script would look. Ran for the first time and everything was smooth and worked correctly. Below is the output for my first run, where I selected 3 `.csv` files, and the second run where I selected 4 `.txt` files.      
+I started by generating two types of files — .csv and .txt — to test how the script should behave. The first version allowed me to choose how many files to create and the type of file I wanted. Here's the result from my first test run:     
 
-![image2](images/v1.0csv.png)  ![image3](images/v1.1txt.png)        
+3 `.csv` files generated:      
+
+![image2](images/v1.0csv.png)         
+
+
+4 `.txt` files generated:      
+
+![image3](images/v1.1txt.png)         
 
 
 
-### Modifications
+### Script Modifications
 
-I wanted to edit the script so that it would include multiple entries in each file and it would randomize the creation date of the file. I also wanted the administrator running the script to be able to choose what the filename would be.     
+I iterated on the script to include more advanced features:     
+- Ability to add multiple entries per file
+- Randomized timestamps (creation, modification, and access time)
+- Custom file names, prompted at runtime      
 
-Here's an example of the script being run in PowerShell and the outcome:     
+This makes each decoy more believable and better simulates how real organizations might store sensitive HR documents.      
+
+Here’s the updated script in PowerShell:          
 
 ![image4](images/2.1script.png)      
+
+Generated honeyfiles shown in the `Terminations` folder:       
 
 ![image5](images/2.1terminated.png)     
 
 
-### Modify Date Created
 
-I also wanted to create another script to be able to modify the different files that I had created already. The script prompts the user for the full path to the file, then asks for the date and time. It then edits the timestamp. Below is an example of the timestamp updated for one of the automated documents I created using [this](./Set-Timestamps.ps1) script.     
+### Timestamp Editor Script
+
+To support additional realism, I also created a second script — [Set-Timestamps.ps1](./Set-Timestamps.ps1) — that lets an admin manually change the creation, modification, and access timestamps on any file.       
+
+It prompts the user for:       
+- Full path to the file
+- Desired date
+- Desired time
+
+This lets me fine-tune the timestamps of previously created files to better blend into the environment:        
 
 ![image3](images/eva-modify.png)     
+
+
+
+### Part 2: File Access Logging
+
+In Part 2, I configure Windows file system auditing to detect when these honeyfiles are accessed. This will turn the decoy documents into functional intrusion detection triggers inside my Active Directory lab.         
