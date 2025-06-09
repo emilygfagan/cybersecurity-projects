@@ -37,7 +37,7 @@ Here’s the updated script in PowerShell:
 
 ![image4](images/2.1script.png)      
 
-Generated honeyfiles shown in the `Terminations` folder:       
+Generated honeyfile output:       
 
 ![image5](images/2.1terminated.png)     
 
