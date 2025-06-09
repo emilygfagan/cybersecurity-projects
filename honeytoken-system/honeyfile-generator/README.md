@@ -58,6 +58,6 @@ This lets me fine-tune the timestamps of previously created files to better blen
 
 
 
-### [Part 2: File Access Logging](./file-access-logging/README.md)     
+### [Part 2: File Access Logging](https://github.com/emilygfagan/cybersecurity-projects/blob/main/honeytoken-system/file-access-logging/README.md)     
 
 In Part 2, I configure Windows file system auditing to detect when these honeyfiles are accessed. This will turn the decoy documents into functional intrusion detection triggers inside my Active Directory lab.         
