@@ -8,3 +8,7 @@ I ran into the issue while learning about Honeytoken systems that creating a bun
 ![image1](images/basecode.png)     
 
 
+Started out with just two file types to test how the script would look. Ran for the first time and everything was smooth and worked correctly. Below is the output for my first run, where I selected 3 `.csv` files, and the second run where I selected 4 `.txt` files.      
+
+![image2](images/v1.0csv.png)  ![image3](images/v1.1txt.png)     
+
