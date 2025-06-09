@@ -13,11 +13,12 @@ This honeytoken system is designed for use in a Windows Server Active Directory 
 
 ### [Part 1: Honeyfile Generation (PowerShell)](./honeyfile-generator/README.md)
 - Run within the `Fagan Systems` domain controller or member server
-- Let the user select a target folder (`ITResources`, `\\fagan.local\HRConfidential\`)
+- Let the user input folder path to save the documents in
 - Prompt for:
   - Number of honeyfiles to generate
   - File type: `.txt`, `.csv`, `.docx`, `.xlsx`
-- Use randomized content (names, roles, salaries) pulled from Active Directory users
+- Use randomized content (names, roles, salaries)
+- Metadata injection for `.docx` and `.xlsx` including backdating
 
  
 ### Part 2: File Access Logging
