@@ -2,7 +2,7 @@
 
 This project is built as an extension of the Fagan Systems Active Directory lab: a fictional company environment designed to simulate enterprise IT infrastructure. The honeytoken system enhances that environment by introducing deception-based security controls, such as fake files and monitoring traps to detect unauthorized activity within the domain. In this project, honeyfiles are generated, placed in sensitive-looking folders (like `HRConfidential`), monitored for access, and logged for analysis.     
 
-Link to my AD lab project [here](https://github.com/emilygfagan/active-directory/blob/main/README.md)!     
+📂 [View the Active Directory project documentation](https://github.com/emilygfagan/active-directory/blob/main/README.md)      
 
 
 
